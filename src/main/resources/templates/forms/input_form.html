@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title th:text="${title}">tab title</title>
+	</head>
+	<body>
+		<h1 th:text="${title}">h1 title</h1>
+		<h2 th:text="${complete}"></h2>
+		<form method="post" action="" th:action="@{/form/confirm}" th:object="${userVo}">
+			<label>Name</label>
+			<input name="name" type="text" th:value="*{name}">
+			<br>
+			<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+
+			<label>Email</label>
+			<input name="email" type="text" th:value="*{email}">
+			<br>
+			<div th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+
+			<label>Contents</label>
+			<textarea name="contents" rows="3" cols="40" th:field="*{contents}"></textarea>
+			<br>
+			<div th:if="${#fields.hasErrors('contents')}" th:errors="*{contents}"></div>
+
+			<hr>
+			<input type="submit" value="confirm">
+		</form>
+	</body>
+</html>
