@@ -9,8 +9,8 @@ public class UserVo
 {
 	@Size(min=1,max=20,message = "invalid name")
 	private String name;
-	@Email
 	@NotNull
+	@Email(message = "invalid email")
 	private String email;
 	@NotNull
 	private String contents;
