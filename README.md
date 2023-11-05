@@ -29,3 +29,12 @@ example:
 | id | name |       email       |contents |      created      |
 | :- | :--  | :-----------------|:--------|:------------------|
 |  1 | Ethan| sample@example.com|  Hello  |2019-11-12 08:34:19|
+## WebBrowser
+Add a user:
+```bash
+  localhost:8080/form/input
+```
+List all users:
+```bash
+  localhost:8080/form
+```
