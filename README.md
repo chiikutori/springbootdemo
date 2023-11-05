@@ -1,6 +1,10 @@
 # springbootdemo
 # Hi, I'm chiikutori! 👋
 ## Mysql
+#### mysql port
+```m
+  3306
+```
 #### CREATE DATABASE
 ```bash
   CREATE DATABASE udemy_userdb;
